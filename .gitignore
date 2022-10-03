@@ -1,0 +1,4 @@
+/venv/
+userparams.db
+.idea
+__pycache__/
