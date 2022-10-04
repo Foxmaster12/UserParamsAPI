@@ -17,7 +17,7 @@ Url for usage:
 ```
 /api/parameters/username/param_name/param_type/
 ```
-Also requires atribute "Value", which should be 
+Also requires attribute "Value", which should be 
 sent in body of request. Example:
 ```
 {"Value": 'value to set'}
@@ -97,15 +97,15 @@ Url for usage:
 ```
 
 ## Usage
-1. After cloning repository from github create your virtual environment.
+1. After cloning repository from GitHub create your virtual environment.
 
 For Windows:
 ```bash
-python -m venv env
+python -m venv venv
 ```
 For Linux:
 ```bash
-python3 -m venv env
+python3 -m venv venv
 ```
 2. Activate virtualenv:
 
@@ -123,4 +123,12 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Enjoy of usage(app starts working after running the file 'main.py')
+4. Create your db
+```bash
+python
+from main import db
+db.create_all()
+exit()
+```
+
+5. Enjoy of usage(app starts working after running the file 'main.py')
