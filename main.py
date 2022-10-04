@@ -140,7 +140,7 @@ def get_all_user_params(user):
     return create_list_of_publicated_class_attributes(UserParams.query.filter_by(user_id=user_from_db.id).all())
 
 
-@app.route("/api/add_user/", methods=("POST", ))
+@app.route("/add_user/", methods=("POST", "GET"))
 def add_user():
     try:
         user = User(name=request.form['name'])
@@ -159,4 +159,4 @@ def main_page():
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
