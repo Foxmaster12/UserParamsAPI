@@ -5,6 +5,10 @@ The project is a realization of interaction with database.
 ## Description
 
 Project consists of several views which could be used for create, read and update database entities. 
+
+### Requirements
+python 3.10.6
+
 ### The views are:
 
 * set_param
@@ -101,7 +105,7 @@ Url for usage:
 
 For Windows:
 ```bash
-python -m venv venv
+py -m venv venv
 ```
 For Linux:
 ```bash
@@ -111,7 +115,7 @@ python3 -m venv venv
 
 For Windows:
 ```bash
-venv\Scripts\activate.bat
+venv\Scripts\activate
 ```
 For Linux:
 ```bash
@@ -124,8 +128,18 @@ pip install -r requirements.txt
 ```
 
 4. Create your db
+
+For Windows:
 ```bash
-python
+py
+from main import db
+db.create_all()
+exit()
+```
+
+For Linux:
+```bash
+python3
 from main import db
 db.create_all()
 exit()
